@@ -1,0 +1,560 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Main container styles */
+.app-container {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: white;
+  color: #333;
+  overflow-x: hidden;
+}
+
+/* Parallax banner effect */
+.parallax-banner {
+  position: relative;
+  height: 50vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner-image {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Content container */
+.content-container {
+  position: relative;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Hero section */
+.hero-section {
+  text-align: center;
+  padding: 40px 0;
+  position: relative;
+}
+
+.hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-decoration {
+  position: absolute;
+  top: 20px;
+  right: 0;
+  width: 150px;
+  height: 150px;
+  z-index: 0;
+  opacity: 0.9;
+  transform: rotate(10deg);
+}
+
+.hero-sticker {
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+  animation: pulse 4s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1) rotate(0deg);
+  }
+  50% {
+    transform: scale(1.05) rotate(5deg);
+  }
+  100% {
+    transform: scale(1) rotate(0deg);
+  }
+}
+
+.hero-section h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  color: #165185ff; /* Blue color from the banner */
+}
+
+.hero-section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #165185ff; /* Blue color from the banner */
+}
+
+.hero-section p {
+  line-height: 1.6;
+  margin-bottom: 20px;
+  font-size: 1.1rem;
+}
+
+/* Who should attend section */
+.attendees-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin: 30px 0;
+  padding: 0;
+  list-style: none;
+}
+
+.attendee-item {
+  background-color: #f8f9fa;
+  border-left: 4px solid #165185ff;
+  padding: 15px 20px;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: calc(50% - 15px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.attendee-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.attendee-item .emoji {
+  margin-right: 10px;
+  font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+  .attendee-item {
+    width: 100%;
+  }
+}
+
+/* Info sections */
+.info-section {
+  padding: 60px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.info-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.section-content {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.info-section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #165185ff; /* Blue color from the banner */
+}
+
+.info-section p {
+  line-height: 1.6;
+  margin-bottom: 20px;
+  font-size: 1.1rem;
+}
+
+.info-section ul {
+  margin-bottom: 20px;
+  padding-left: 20px;
+}
+
+.info-section li {
+  margin-bottom: 10px;
+  line-height: 1.4;
+}
+
+/* Alternate section styling */
+.alt-section {
+  background-color: #f8f9fa;
+}
+
+/* Signup section */
+.signup-section {
+  text-align: center;
+  padding: 60px 0;
+}
+
+.signup-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.sticker-container {
+  flex: 0 0 200px;
+  position: relative;
+}
+
+.sticker-gif {
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+  border-radius: 50%;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.signup-content {
+  flex: 1;
+  min-width: 300px;
+}
+
+.signup-content h2 {
+  margin-bottom: 20px;
+  color: #165185ff;
+}
+
+.signup-button {
+  display: inline-block;
+  padding: 15px 30px;
+  background-color: #165185ff;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.signup-button:hover {
+  background-color: #0d3b61;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+.event-date {
+  margin-top: 20px;
+  font-size: 1.2rem;
+  color: #165185ff;
+}
+
+/* Footer styles */
+footer {
+  text-align: center;
+  padding: 40px 0;
+  background-color: #f8f9fa;
+  margin-top: 40px;
+}
+
+.footer-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.footer-info {
+  flex: 1;
+}
+
+.footer-decoration {
+  position: absolute;
+  right: 20px;
+  bottom: 0;
+  width: 60px;
+  height: 60px;
+}
+
+.footer-sticker {
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+  opacity: 0.7;
+  transform: rotate(-10deg);
+}
+
+footer p {
+  margin-bottom: 10px;
+}
+
+.contact-link {
+  color: #165185ff;
+  text-decoration: none;
+  margin-left: 10px;
+  transition: color 0.3s ease;
+}
+
+.contact-link:hover {
+  color: #0d3b61;
+  text-decoration: underline;
+}
+
+/* Parallax scroll effect */
+@media (min-width: 768px) {
+  .info-section {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  /* Add some subtle parallax movement */
+  .info-section:nth-child(odd) {
+    transform: translateZ(-1px) scale(1.1);
+  }
+  
+  .info-section:nth-child(even) {
+    transform: translateZ(-0.5px) scale(1.05);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .hero-section h1 {
+    font-size: 2.5rem;
+  }
+  
+  .hero-section h2 {
+    font-size: 1.5rem;
+  }
+  
+  .info-section {
+    padding: 40px 0;
+  }
+  
+  .info-section h2 {
+    font-size: 1.8rem;
+  }
+  
+  .hero-decoration {
+    width: 100px;
+    height: 100px;
+    top: 10px;
+    right: 10px;
+  }
+  
+  .workshop-cards {
+    grid-template-columns: 1fr;
+  }
+  
+  .benefits-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-section h1 {
+    font-size: 2rem;
+  }
+  
+  .hero-section h2 {
+    font-size: 1.2rem;
+  }
+  
+  .signup-button {
+    padding: 12px 24px;
+    font-size: 1rem;
+  }
+  
+  .hero-decoration {
+    width: 80px;
+    height: 80px;
+    position: relative;
+    top: 0;
+    right: 0;
+    margin: 0 auto 20px;
+    display: block;
+  }
+  
+  .sticker-container {
+    flex: 0 0 120px;
+  }
+  
+  .sticker-gif {
+    max-width: 120px;
+  }
+  
+  .footer-decoration {
+    display: none;
+  }
+}
+
+/* Workshop cards */
+.workshop-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  margin: 30px 0;
+}
+
+.workshop-card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  padding: 25px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.workshop-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.workshop-icon {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.workshop-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+  color: #165185ff;
+}
+
+.workshop-card p {
+  flex-grow: 1;
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.workshop-tag {
+  display: inline-block;
+  background-color: #e9f0f8;
+  color: #165185ff;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  align-self: flex-start;
+}
+
+@media (max-width: 768px) {
+  .workshop-cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Benefits section */
+.benefits-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+  margin: 30px 0;
+}
+
+.benefit-item {
+  display: flex;
+  align-items: flex-start;
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+}
+
+.benefit-item:hover {
+  transform: translateY(-5px);
+}
+
+.benefit-icon {
+  font-size: 2rem;
+  margin-right: 15px;
+  flex-shrink: 0;
+}
+
+.benefit-content h3 {
+  margin: 0 0 10px 0;
+  color: #165185ff;
+  font-size: 1.2rem;
+}
+
+.benefit-content p {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.highlight-text {
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-top: 30px;
+  padding: 15px;
+  background-color: #e9f0f8;
+  border-radius: 8px;
+  color: #165185ff;
+}
+
+@media (max-width: 768px) {
+  .benefits-container {
+    grid-template-columns: 1fr;
+  }
+}
