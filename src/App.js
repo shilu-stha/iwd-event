@@ -19,14 +19,14 @@ function App() {
         {/* Title and Description */}
         <section className="hero-section">
           <div className="hero-content">
-            <h1>Women in AI</h1>
+            <h1>Build with AI</h1>
             <p>
               Join us for an exciting event celebrating tech, innovation, and community!
               We have a lineup of inspiring talks, hands-on workshops,
               and opportunities to network with industry leaders.
             </p>
             <p>
-              This event celebrates International Women's Day (IWD) by bringing together women in AI/ML to share technical insights, hands-on learning, and real-world applications of artificial intelligence.
+              This event celebrates International Women's Day (IWD) by bringing together women in AI and Data Science to share technical insights, hands-on learning, and real-world applications of artificial intelligence.
             </p>
           </div>
           
@@ -75,31 +75,31 @@ function App() {
         {/* Workshops Section */}
         <section className="info-section alt-section">
           <div className="section-content">
-            <h2>Workshops</h2>
+            <h2>Workshops [TBD]</h2>
             <p>
               Gain hands-on experience with cutting-edge AI technologies through our interactive workshops:
             </p>
             <div className="workshop-cards">
               <div className="workshop-card">
                 <div className="workshop-icon">🤖</div>
-                <h3>Introduction to Machine Learning with Python [TBD]</h3>
+                {/* <h3>Introduction to Machine Learning with Python [TBD]</h3>
                 <p>Learn the fundamentals of machine learning and implement your first ML models using Python.</p>
-                <div className="workshop-tag">Beginner Friendly</div>
+                <div className="workshop-tag">Beginner Friendly</div> */}
               </div>
               
               <div className="workshop-card">
                 <div className="workshop-icon">🧠</div>
-                <h3>Building Your First Neural Network [TBD]</h3>
+                {/* <h3>Building Your First Neural Network [TBD]</h3>
                 <p>Dive into neural networks and deep learning concepts with hands-on exercises.</p>
-                <div className="workshop-tag">Intermediate</div>
+                <div className="workshop-tag">Intermediate</div> */}
               </div>
               
-              <div className="workshop-card">
+              {/* <div className="workshop-card">
                 <div className="workshop-icon">💼</div>
                 <h3>Practical Applications of AI in Business [TBD]</h3>
                 <p>Explore real-world applications of AI and how they're transforming industries.</p>
                 <div className="workshop-tag">All Levels</div>
-              </div>
+              </div> */}
             </div>
             <p>
               All workshops are designed to be accessible for various skill levels, with a focus on practical skills you can apply immediately.
@@ -186,7 +186,7 @@ function App() {
             >
               Sign Up Now
             </a>
-            <p className="event-date">March 30, 2025 • 10am-12:30pm</p>
+            <p className="event-date">April 20, 2025 • 10am-12:30pm</p>
           </div>
         </section>
 
@@ -196,15 +196,15 @@ function App() {
             <div className="footer-info">
               <p>
                 Contact us: 
-                <a href="mailto:wtm.nepal@example.com" className="contact-link">
-                  wtm.nepal@example.com
+                <a href="mailto:sth.shilu@gmail.com" className="contact-link">
+                 Email
                 </a>
               </p>
               <p>
-                <a href="https://www.linkedin.com/company/women-techmakers-nepal" target="_blank" rel="noopener noreferrer" className="contact-link">
+                <a href="https://www.linkedin.com/in/shilushrestha" target="_blank" rel="noopener noreferrer" className="contact-link">
                   LinkedIn
                 </a>
-                <a href="https://twitter.com/WTMNepal" target="_blank" rel="noopener noreferrer" className="contact-link">
+                <a href="https://twitter.com/lilsunsyn" target="_blank" rel="noopener noreferrer" className="contact-link">
                   Twitter
                 </a>
               </p>
